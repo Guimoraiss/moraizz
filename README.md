@@ -20,7 +20,8 @@ O projeto foi criado para apresentar um pouco sobre mim, minhas redes sociais e 
 - Player de música integrado
 
 ## 📷 Preview
-![Preview do site] <img src="assets/Preview/preview.png">
+<img src="assets/Preview/preview.png">
+
 ## 🔗 Redes Sociais
 
 - GitHub

@@ -15,17 +15,26 @@ O projeto foi criado para apresentar um pouco sobre mim, minhas redes sociais e 
 
 - HTML
 - CSS
+- JavaScript
+
+## 🎨 Características
 
 ## 🎨 Características
 
 - Layout centralizado
 - Efeito Glassmorphism
-- Fundo animado em pixel art
+- Alternância entre tema claro e escuro
 - Links para redes sociais
-- Player de música integrado
+- Integração com Spotify
+- Design responsivo
 
 ## 📷 Preview
-<img src="assets/Preview/preview.png">
+
+### 🌙 Tema Escuro
+<img src="assets/Preview/preview-dark.png">
+
+### ☀️ Tema Claro
+<img src="assets/Preview/preview-light.png">
 
 ## 🔗 Redes Sociais
 
@@ -35,7 +44,7 @@ O projeto foi criado para apresentar um pouco sobre mim, minhas redes sociais e 
 
 ## 📚 Objetivo
 
-Este projeto foi desenvolvido com o objetivo de praticar conceitos básicos de desenvolvimento web e servir como meu primeiro portfólio online.
+Este projeto foi desenvolvido com o objetivo de praticar conceitos básicos de desenvolvimento web, incluindo manipulação de temas, estilização com CSS e publicação de projetos online.
 
 ## 👨‍💻 Autor
 

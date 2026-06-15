@@ -31,10 +31,10 @@ O projeto foi criado para apresentar um pouco sobre mim, minhas redes sociais e 
 ## 📷 Preview
 
 ### 🌙 Tema Escuro
-<img src="assets/Preview/preview-dark.png">
+<img src="/assets/Preview/preview dark.png">
 
 ### ☀️ Tema Claro
-<img src="assets/Preview/preview-light.png">
+<img src="assets/Preview/preview light.png">
 
 ## 🔗 Redes Sociais
 

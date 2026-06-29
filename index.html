@@ -1,108 +1,145 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <link rel="icon" href="./assets/Icons/logo.svg" type="image/svg+xml">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Moraizz</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Hub pessoal de Guilherme Morais com redes sociais, portfólios e projetos.">
 
- <div id="swich" onclick="togglemode()">
-    <button></button>
-    <span></span>
-    
-</div>
-        
-    <div class="card">
+        <link rel="icon" href="./assets/icons/logo.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/home.css">
 
-    <div class="profile-photo">
-    </div>
-      
-    <h1>Guilherme Morais</h1>
-    
-    <p>Beginner Dev👨‍💻</p>
-    <p class="instagram-text"> Ig: @s1goli</p>
-    
+        <title>Moraizz</title>
+    </head>
+    <body class="home-page">
+        <header class="home-header" aria-label="Alternância de tema">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema">
+                <span class="theme-toggle__thumb" aria-hidden="true"></span>
+                <span class="theme-toggle__track" aria-hidden="true"></span>
+            </button>
+        </header>
 
-    
-    <div id="social-links">
-        <a href="https://github.com/Guimoraiss" target="_blank">
-        <img src="assets/Icons/github-svgrepo-com.svg" width="48">
-    </a>
-    
-        <a href="https://www.linkedin.com/in/guilherme-morais-8408b3221/" target="_blank">
-        <img src="assets/Icons/linkedin-svgrepo-com.svg" width="48">
-    </a>
-        <a href="https://www.youtube.com/@moraizzz" target="_blank">
-        <img src="assets/Icons/youtube-youtube-svgrepo-com.svg" width="48">
-    </a>
+        <main class="home-main">
+            <section class="profile-card" aria-labelledby="profile-title">
+                <div class="profile-card__photo" aria-hidden="true"></div>
 
-    </div>
-    </div>
+                <h1 class="profile-card__title" id="profile-title">Guilherme Morais</h1>
+                <p class="profile-card__subtitle">beginner dev👨‍💻</p>
+                <p class="profile-card__instagram">Ig: @s1goli</p>
 
-    <div class="portfolio-cards">
-        <div class="portfolio-card" id="portfolio-web-card">
-        <a href="#">
-        <img
-    class="portfolio-card-image"
-    id="portfolio-web-image"
-    src="assets/Icons/web dev logo.svg"
-    alt="Logo do portfólio web"
->
-</a>
-            <div class="portfolio-card-content">
-                <h2>Portfólio Dev Web</h2>
-                
-            </div>
-        </div>
+                <nav class="social-links" aria-label="Redes sociais">
+                    <a class="social-links__item" href="https://github.com/Guimoraiss" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/github-svgrepo-com.svg" width="48" alt="GitHub">
+                    </a>
 
-        <div class="portfolio-card" id="portfolio-editor-card">
-            <a href="#">
-        <img
-            class="portfolio-card-image"
-            id="portfolio-web-image"
-            src="assets/Icons/MoraizEditor.svg"
-            alt="Logo do portfólio web"
->
-</a>
-            <div class="portfolio-card-content">
-                <h2>Portfólio Video Editor</h2>
-                
-            </div>
-        </div>
-    </div>
+                    <a class="social-links__item" href="https://www.linkedin.com/in/guilherme-morais-8408b3221/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/linkedin-svgrepo-com.svg" width="48" alt="LinkedIn">
+                    </a>
 
-   
-    
-    <div class="player">
-        <div class="music-player" id="music-player">
-            <audio id="music-audio" src="assets/Music-Audio/Brilho Eterno Remake Beat.mp3"></audio>
-            <div class="music-info">
-                <p class="music-label">Tocando agora</p>
-                <h2 class="music-title" id="music-title">Uns Dos Projetos Que Participei</h2>
+                    <a class="social-links__item" href="https://www.youtube.com/@moraizzz" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/youtube-youtube-svgrepo-com.svg" width="48" alt="YouTube">
+                    </a>
+                </nav>
+            </section>
 
-                <div class="music-progress" id="music-progress">
-                    <div class="music-progress-fill" id="music-progress-fill"></div>
+            <section class="portfolio-links" aria-label="Portfólios">
+                <div class="portfolio-link-card">
+                    <a class="portfolio-link-card__media" href="dev/index.html" aria-label="Abrir portfólio Dev Web">
+                        <img
+                            class="portfolio-link-card__image"
+                            src="assets/icons/web dev logo.svg"
+                            alt="Logo do portfólio de desenvolvimento web"
+                        >
+                    </a>
+
+                    <div class="portfolio-link-card__content">
+                        <h2 class="portfolio-link-card__title">Portfólio Dev Web</h2>
+                    </div>
                 </div>
 
-                <div class="music-time">
-                    <span id="music-current-time">00:00</span>
-                    <span id="music-duration">00:00</span>
+                <div class="portfolio-link-card">
+                    <a class="portfolio-link-card__media" href="video/index.html" aria-label="Abrir portfólio de vídeo">
+                        <img
+                            class="portfolio-link-card__image"
+                            src="assets/icons/MoraizEditor.svg"
+                            alt="Logo do portfólio de edição de vídeo"
+                        >
+                    </a>
+
+                    <div class="portfolio-link-card__content">
+                        <h2 class="portfolio-link-card__title">Portfólio de Vídeo</h2>
+                    </div>
                 </div>
+            </section>
+
+          <section class="audio-card" aria-labelledby="music-title">
+    <div class="music-player" id="music-player">
+
+        <audio id="music-audio"></audio>
+
+        <div class="music-player__info">
+
+            <p class="music-player__label">
+                Projetos Que Participei
+            </p>
+
+            <h2
+                class="music-player__title"
+                id="music-title">
+                Carregando...
+            </h2>
+
+            <div
+                class="music-player__progress"
+                id="music-progress">
+
+                <div
+                    class="music-player__progress-fill"
+                    id="music-progress-fill">
+                </div>
+
             </div>
 
-            <div class="music-controls">
-                <button class="music-control-button music-play-button" id="play-pause-button" type="button">Play/Pause</button>
+            <div class="music-player__time">
+                <span id="music-current-time">00:00</span>
+                <span id="music-duration">00:00</span>
             </div>
+
         </div>
+
+        <div class="music-player__controls">
+
+            <button
+                class="music-player__button"
+                id="previous-button"
+                type="button">
+                ⏮
+            </button>
+
+            <button
+                class="music-player__button music-player__button--play"
+                id="play-pause-button"
+                type="button">
+                ▶
+            </button>
+
+            <button
+                class="music-player__button"
+                id="next-button"
+                type="button">
+                ⏭
+            </button>
+
+        </div>
+
     </div>
+</section>
+        </main>
 
- <script src="script.js"></script>
-
-</body>
-</html>
+        <script src="assets/js/global.js"></script>
+        <script src="assets/js/home.js"></script>
+    </body>
+    </html>

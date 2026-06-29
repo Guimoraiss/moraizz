@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-display: "Pixelify Sans", var(--font-primary);
+    --color-page: #070816;
+    --color-text: #f7f4ff;
+    --color-muted: #b9b4d8;
+    --color-purple: #9b5cff;
+    --color-blue: #46d9ff;
+    --color-pink: #ff5fd7;
+    --glass-bg: rgba(17, 18, 42, 0.58);
+    --glass-bg-strong: rgba(24, 22, 55, 0.74);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glow-purple: 0 0 28px rgba(155, 92, 255, 0.38);
+    --glow-blue: 0 0 30px rgba(70, 217, 255, 0.24);
+    --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.42);
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --transition-default: 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-shell {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 32px 0 56px;
+}
+
+.glass-container,
+.glass-card {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft), var(--glow-purple);
+}
+
+.glass-container {
+    border-radius: var(--radius-lg);
+}
+
+.glass-card {
+    border-radius: var(--radius-md);
+}
+
+.portfolio-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--color-text);
+    text-shadow: 0 0 18px rgba(155, 92, 255, 0.76), 0 0 28px rgba(70, 217, 255, 0.22);
+}
+
+.portfolio-eyebrow {
+    margin: 0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-blue);
+}
+
+.portfolio-button {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 18px rgba(155, 92, 255, 0.2);
+    transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default);
+}
+
+.portfolio-button:hover {
+    transform: translateY(-2px) scale(1.03);
+    border-color: rgba(70, 217, 255, 0.58);
+    box-shadow: 0 0 26px rgba(70, 217, 255, 0.3), 0 0 30px rgba(155, 92, 255, 0.28);
+}
+
+.fade-in {
+    animation: fadeIn 0.75s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

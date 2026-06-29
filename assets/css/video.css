@@ -1,0 +1,247 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    overflow-x: hidden;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        radial-gradient(circle at 50% 0%, rgba(255, 95, 215, 0.2), transparent 32%),
+        radial-gradient(circle at 12% 72%, rgba(70, 217, 255, 0.16), transparent 28%),
+        linear-gradient(145deg, #090714 0%, #151026 44%, #071625 100%);
+    background-size: 30px 30px, 30px 30px, auto, auto, auto;
+}
+
+.video-page img {
+    max-width: 100%;
+    display: block;
+}
+
+.video-page {
+    display: grid;
+    gap: 24px;
+}
+
+.portfolio-nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.video-heading {
+    display: grid;
+    gap: 10px;
+    max-width: 860px;
+}
+
+.video-heading h1 {
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    line-height: 0.96;
+}
+
+.featured-video {
+    min-height: 520px;
+    padding: clamp(16px, 3vw, 28px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.video-stage,
+.video-frame {
+    min-width: 0;
+}
+
+.video-stage {
+    display: grid;
+}
+
+.video-frame {
+    position: relative;
+    min-height: 460px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(135deg, rgba(155, 92, 255, 0.28), rgba(70, 217, 255, 0.1) 52%, rgba(255, 95, 215, 0.22));
+    background-size: 24px 24px, 24px 24px, auto;
+    box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.42), 0 0 36px rgba(155, 92, 255, 0.22);
+}
+
+.video-frame::after {
+    content: "";
+    position: absolute;
+    inset: auto 18px 18px;
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-pink) 0 36%, rgba(255, 255, 255, 0.22) 36%);
+    box-shadow: 0 0 16px rgba(255, 95, 215, 0.5);
+}
+
+
+
+.play-button,
+.mini-play {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
+
+.play-button {
+    width: 82px;
+    height: 82px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 0 32px rgba(70, 217, 255, 0.42), 0 0 42px rgba(155, 92, 255, 0.42);
+}
+
+.play-button::before,
+.mini-play::before {
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 18px solid #171129;
+}
+
+.play-button:hover,
+.mini-play:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 36px rgba(255, 95, 215, 0.48), 0 0 46px rgba(70, 217, 255, 0.42);
+}
+
+.featured-info {
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-info h2 {
+    margin-top: 12px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 0.98;
+}
+
+.featured-info p:not(.portfolio-eyebrow) {
+    color: var(--color-muted);
+    line-height: 1.7;
+    font-size: 1.04rem;
+}
+
+.featured-info .portfolio-button {
+    width: fit-content;
+    margin-top: 18px;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.video-card {
+    padding: 14px;
+    transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default);
+}
+
+.video-card:hover {
+    transform: translateY(-7px) scale(1.06);
+    
+    box-shadow: var(--shadow-soft), 0 0 40px rgba(255, 95, 215, 0.24), 0 0 42px rgba(70, 217, 255, 0.2);
+}
+
+.thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background-size: cover;
+}
+
+.thumb span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+}
+
+.thumb-purple {
+    background-image: url("../icons/maxresdefault.jpg");
+}
+
+.thumb-blue {
+    background-image:  url("../icons/Shadow.jpg");
+}
+
+.thumb-pink {
+    background-image: url("../icons/Rio360.jpg");
+}
+
+.mini-play {
+    right: 12px;
+    bottom: 12px;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.86);
+}
+
+.mini-play::before {
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-left-width: 12px;
+}
+
+.video-card h3 {
+    margin: 16px 0 8px;
+    font-size: 1.18rem;
+}
+
+.video-card p {
+    margin: 0;
+    color: var(--color-muted);
+    line-height: 1.55;
+}
+
+.video-card-link {
+    margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+    .featured-video,
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .video-frame {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 560px) {
+    .page-shell {
+        width: min(100% - 24px, 1180px);
+        padding-top: 18px;
+    }
+
+    .featured-video {
+        min-height: 0;
+    }
+
+    .video-frame {
+        min-height: 260px;
+    }
+}

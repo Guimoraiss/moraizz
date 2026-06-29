@@ -14,14 +14,6 @@ Site pessoal com estética pixel art, glassmorphism e brilho neon. A página ini
 - Portfólio de edição de vídeo
 - Estrutura modular para adicionar novos projetos
 
-## Como adicionar projetos
-
-Os projetos ficam diretamente no HTML para facilitar a edição manual:
-
-- Desenvolvimento web: edite os cards em `dev/index.html`
-- Edição de vídeo: edite o destaque e os cards em `video/index.html`
-
-Em cada card você pode alterar título, descrição, imagem, texto alternativo, link e texto do botão. Para vídeos, coloque o endereço do YouTube, Vimeo, Drive ou arquivo publicado no `href` do botão "Assistir vídeo".
 
 ## Tecnologias
 

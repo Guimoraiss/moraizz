@@ -39,13 +39,6 @@ Em cada card você pode alterar título, descrição, imagem, texto alternativo,
 
 ![Tema claro](assets/images/preview/whitetheme.png)
 
-## Próximos passos
-
-- Adicionar projetos reais ao portfólio de desenvolvimento web
-- Adicionar vídeos reais ao portfólio de edição
-- Melhorar acessibilidade
-- Adicionar novas animações e interações
-
 ## Contato
 
 - GitHub
